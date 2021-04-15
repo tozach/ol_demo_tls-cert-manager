@@ -1,0 +1,36 @@
+---
+version: 1
+service:
+  name: TLS Certificate Manager
+  lifecycle: generally_available
+  tier: tier_3
+  product: 
+  owner: internal_tools
+  language: Node.js
+  framework: Express
+  description: Shows a list of all outstanding TLS certificates deployed in our infrastructure,
+    as well as their expiry dates.
+  aliases: 
+  tags: 
+  repositories:
+  - name: OL-Demo/tls-cert-manager
+    path: "/"
+    provider: github
+  tools:
+  - name: Kubernetes
+    category: orchestrator
+    url: https://deploy.bigriver.com/tls_certs
+    environment: 
+  - name: Sentry
+    category: errors
+    url: https://bigriver.sentry.com/tls_cert_manager
+    environment: 
+  - name: Pingdom
+    category: health_checks
+    url: https://bigriver.pingdom.com/tls_certificates
+    environment: 
+  - name: Splunk
+    category: logs
+    url: https://logs.bigriver.com/tls_certificate_manager
+    environment: 
+  dependencies: 
